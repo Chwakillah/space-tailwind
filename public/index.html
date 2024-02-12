@@ -5,26 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space</title>
     <!-- tailwind css -->
-   <link rel="stylesheet" href="./css/output.css">
-     <!-- alpine js -->
-     <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="./css/output.css">
+        <!-- alpine js -->
+        <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
-   <nav>
-        <div class="container bg-pink-500 mx-auto">
+    <nav x-data="{navOpen:true}" class="border-b border-base shadow bg-gradient-to-b from-kuning to-white">
+        <div class="container pt-8 pb-6 px-6  mx-auto">
             <div class="flex items-center justify-between">
-                <img src="../public/aset/Space.svg" alt="">
-                <div> 
-                    <ul class="flex">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Templates</a></li>
-                        <li><a href="">Price</a></li>
-                        <li><a href="">Help</a></li>
-                        <li><a href="">Get In Touch</a></li>
+                <img src="../public/aset/Space.svg" alt="" class="order-1 size-[58px]">
+                <ion-icon @click="navOpen = !navOpen" name="menu-outline" class="order-2 size-6 opacity-80 lg:hidden"></ion-icon>
+                <div class="hidden order-2 lg:block"> 
+                    <ul class="flex gap-12 items-center">
+                        <li class="text-base font-bold hover:text-biru"><a href="#">Home</a></li>
+                        <li class="text-base font-bold hover:text-biru"><a href="#">Templates</a></li>
+                        <li class="text-base font-bold hover:text-biru"><a href="#">Price</a></li>
+                        <li class="text-base font-bold hover:text-biru"><a href="#">Help</a></li>
+                        <li class="text-biru font-bold py-2 px-4 border border-base rounded-[7px]"><a href="#">Get In Touch</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-   </nav>
+        <div x-show="navOpen"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90"
+        class="lg:hidden pb-4"> 
+            <ul class="flex gap-10 justify-between items-center flex-col">
+                <li class="text-base font-bold hover:text-biru"><a href="#">Home</a></li>
+                <li class="text-base font-bold hover:text-biru"><a href="#">Templates</a></li>
+                <li class="text-base font-bold hover:text-biru"><a href="#">Price</a></li>
+                <li class="text-base font-bold hover:text-biru"><a href="#">Help</a></li>
+                <li class="text-base font-bold hover:text-biru"><a href="#">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div>
+            <div>
+                
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>

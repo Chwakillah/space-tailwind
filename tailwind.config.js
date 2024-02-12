@@ -9,7 +9,7 @@ module.exports = {
       colors:{
         "kuning" : '#FFF4D4',
         "biru" : '#0E6FFF',
-        "pastel" : "#D1DCE5",
+        "base" : "#D1DCE5",
       }
     },
   },
