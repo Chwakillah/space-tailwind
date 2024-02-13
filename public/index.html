@@ -7,11 +7,16 @@
     <title>Space</title>
     <!-- tailwind css -->
     <link rel="stylesheet" href="./css/output.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
     <!-- alpine js -->
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body>
+<body class="">
     <nav x-data="{navOpen:true}" class="bg-gradient-to-b from-pinky to-pinkies fixed top-0 w-full z-10">
         <div class="container pt-4 pb-4 px-6 mx-auto">
             <div class="flex items-center justify-between">
@@ -26,7 +31,7 @@
                         </li>
                         <li
                             class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out">
-                            <a href="#">Promo</a>
+                            <a href="#services">Services</a>
                         </li>
                         <li
                             class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out">
@@ -50,7 +55,7 @@
                 <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
                         href="#">Home</a></li>
                 <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
-                        href="#">Promo</a></li>
+                        href="#services">Services</a></li>
                 <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
                         href="#">Price</a></li>
                 <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
@@ -65,15 +70,15 @@
             <div class="grid grid-cols-12 text-center">
                 <div class="col-span-12 lg:col-span-7 lg:order-2">
                     <div class="flex items-center justify-center">
-                        <img src="https://i.pinimg.com/originals/c8/66/1b/c8661bb436a77c99a28bacbac5006314.jpg" alt="" class="lg:w-[659px] lg:h-[659px] w-[372px] h-[641px] object-cover object-center rounded-lg transition-transform duration-300 transform hover:scale-105">
+                        <img src="https://i.pinimg.com/originals/c8/66/1b/c8661bb436a77c99a28bacbac5006314.jpg" alt=""
+                            class="lg:w-[659px] lg:h-[659px] w-[372px] h-[641px] object-cover object-center rounded-lg transition-transform duration-300 transform hover:scale-105">
                     </div>
                 </div>
                 <div class="col-span-12 mt-12 mr-14 ml-14 mb-12 lg:col-span-5 lg:order-1">
                     <div>
-                        <p class="text-base font-medium text-[23px] text-center lg:text-left text-dusty">LUXURY DESIGN
+                        <p class="text-dusty font-medium text-[23px] text-center lg:text-left">LUXURY DESIGN
                         </p>
-                        <h1
-                            class="font-bold text-[32px] md:text-[40px] text-center mt-6 lg:text-left text-magenta">
+                        <h1 class="font-bold text-[32px] md:text-[40px] text-center mt-6 lg:text-left text-magenta">
                             More Than Half a Century We Serve Quality Watch to You</h1>
                         <div class="text-center mt-10 lg:text-left">
                             <button
@@ -82,10 +87,12 @@
                         </div>
                     </div>
                     <div class="">
-                        <p class="font-medium text-[19px] mt-[43px] text-center text-dusty lg:text-left">"I feel so much productive
+                        <p class="font-medium text-[19px] mt-[43px] text-center text-dusty lg:text-left">"I feel so much
+                            productive
                             ❤️ as I used this watch.”</p>
                         <div class="mt-[33px] flex items-center justify-center gap-5 lg:items-start lg:justify-start">
-                            <img src="/public/aset/profile.png" alt="" class="w-[82px] h-[82px] object-cover object-center rounded-full">
+                            <img src="/public/aset/profile.png" alt=""
+                                class="w-[82px] h-[82px] object-cover object-center rounded-full">
                             <div class=" flex flex-col gap-1 items-start justify-start">
                                 <h2 class="font-bold text-magenta text-[17px]">Chwakillah</h2>
                                 <p class="font-medium text-choco">CEO at Space-inWatch</p>
@@ -96,9 +103,15 @@
             </div>
         </div>
     </section>
-    <section>
-        <div>
-            
+    <section id="services">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-12 my-32 ml-14">
+                <div class="lg:col-span-7 col-span-12 mb-[96px]">
+                    <p class="text-dusty font-medium text-[23px] text-center lg:text-left mb-[43px]">SERVICES</p>
+                    <h2 class="text-magenta font-bold text-[32px] text-center lg:text-left mb-[62px]">Our best quality and design by the expert.</h2>
+                    <p class="text-choco font-medium text-[28px] text-justify lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eaque nihil repudiandae magnam, ratione alias explicabo quo ad aliquid at mollitia</p>
+                </div>
+            </div>
         </div>
     </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
