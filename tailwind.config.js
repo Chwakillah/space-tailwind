@@ -7,9 +7,13 @@ module.exports = {
         "helvatica" : ['Helvatica Neue']
       },
       colors:{
-        "kuning" : '#FFF4D4',
-        "biru" : '#0E6FFF',
+        "pinky" : '#FFE7E7',
+        "pinkies" : '#FFEBEB',
+        "dusty" : '#CAA6A6',
         "base" : "#D1DCE5",
+        "softy" : "#B47B84",
+        "magenta" : "#944E63",
+        "choco" : "#503C3C"
       }
     },
   },

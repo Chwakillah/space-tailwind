@@ -1,62 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space</title>
     <!-- tailwind css -->
     <link rel="stylesheet" href="./css/output.css">
-        <!-- alpine js -->
-        <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- alpine js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
+
 <body>
-    <nav x-data="{navOpen:true}" class="border-b border-base shadow bg-gradient-to-b from-kuning to-white">
-        <div class="container pt-8 pb-6 px-6  mx-auto">
+    <nav x-data="{navOpen:true}" class="bg-gradient-to-b from-pinky to-pinkies fixed top-0 w-full z-10">
+        <div class="container pt-4 pb-4 px-6 mx-auto">
             <div class="flex items-center justify-between">
-                <img src="../public/aset/Space.svg" alt="" class="order-1 size-[58px]">
-                <ion-icon @click="navOpen = !navOpen" name="menu-outline" class="order-2 size-6 opacity-80 lg:hidden"></ion-icon>
-                <div class="hidden order-2 lg:block"> 
+                <img src="../public/aset/Space.svg" alt="" class="order-1">
+                <ion-icon @click="navOpen = !navOpen" name="menu-outline"
+                    class="order-2 size-6 opacity-80 lg:hidden"></ion-icon>
+                <div class="hidden order-2 lg:block">
                     <ul class="flex gap-12 items-center">
-                        <li class="text-base font-bold hover:text-biru"><a href="#">Home</a></li>
-                        <li class="text-base font-bold hover:text-biru"><a href="#">Templates</a></li>
-                        <li class="text-base font-bold hover:text-biru"><a href="#">Price</a></li>
-                        <li class="text-base font-bold hover:text-biru"><a href="#">Help</a></li>
-                        <li class="text-biru font-bold py-2 px-4 border border-base rounded-[7px]"><a href="#">Get In Touch</a></li>
+                        <li
+                            class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out">
+                            <a href="#hero">Home</a>
+                        </li>
+                        <li
+                            class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out">
+                            <a href="#">Promo</a>
+                        </li>
+                        <li
+                            class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out">
+                            <a href="#">Price</a>
+                        </li>
+                        <li
+                            class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out">
+                            <a href="#">Help</a>
+                        </li>
+                        <li
+                            class="text-dusty font-bold py-2 px-4 border border-base rounded-[7px] hover:text-white hover:bg-magenta transition-0.5 transition duration-500 ease-out">
+                            <a href="#">Get In
+                                Touch</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div x-show="navOpen"
-        class="lg:hidden pb-4"> 
+        <div x-show="navOpen" class="lg:hidden pb-4">
             <ul class="flex gap-10 justify-between items-center flex-col">
-                <li class="text-base font-bold hover:text-biru"><a href="#">Home</a></li>
-                <li class="text-base font-bold hover:text-biru"><a href="#">Templates</a></li>
-                <li class="text-base font-bold hover:text-biru"><a href="#">Price</a></li>
-                <li class="text-base font-bold hover:text-biru"><a href="#">Help</a></li>
-                <li class="text-base font-bold hover:text-biru"><a href="#">Get In Touch</a></li>
+                <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
+                        href="#">Home</a></li>
+                <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
+                        href="#">Promo</a></li>
+                <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
+                        href="#">Price</a></li>
+                <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
+                        href="#">Help</a></li>
+                <li class="text-dusty font-bold hover:text-magenta transition-0.5 transition duration-500 ease-out"><a
+                        href="#">Get In Touch</a></li>
             </ul>
         </div>
     </nav>
-    <section>
-        <div class="container mx-auto my-24">
-            <div class="grid grid-cols-12">
-                <div class="col-span-12">
-                    <div class="">
-                        <img src="/public/aset/Slider.png" alt="" class="text-center">
+    <section id="hero" class="bg-gradient-to-b from-pinkies to-white pt-20 pb-10">
+        <div class="container mx-auto mb-24">
+            <div class="grid grid-cols-12 text-center">
+                <div class="col-span-12 lg:col-span-7 lg:order-2">
+                    <div class="flex items-center justify-center">
+                        <img src="https://i.pinimg.com/originals/c8/66/1b/c8661bb436a77c99a28bacbac5006314.jpg" alt="" class="lg:w-[659px] lg:h-[659px] w-[372px] h-[641px] object-cover object-center rounded-lg transition-transform duration-300 transform hover:scale-105">
                     </div>
                 </div>
-                <div class="col-span-12 mt-12">
+                <div class="col-span-12 mt-12 mr-14 ml-14 mb-12 lg:col-span-5 lg:order-1">
                     <div>
-                        <p class="text-base font-medium text-[23px] md:text-[30px] text-center">DESIGN INSPIRATION</p>
-                        <h1 class="font-bold text-[32px] md:text-[36px] text-center mt-10">Convallis turpis erat tempus, viverra aliquet.</h1>
-                        <div class="text-center mt-10">
-                            <button class="bg-biru md:px-8 md:py-4 px-6 py-3 font-bold text-white text-[20px] md:text-[25px] hover:bg-blue-400">Get In Touch</button>
+                        <p class="text-base font-medium text-[23px] text-center lg:text-left text-dusty">LUXURY DESIGN
+                        </p>
+                        <h1
+                            class="font-bold text-[32px] md:text-[40px] text-center mt-6 lg:text-left text-magenta">
+                            More Than Half a Century We Serve Quality Watch to You</h1>
+                        <div class="text-center mt-10 lg:text-left">
+                            <button
+                                class="bg-pinky md:px-10 md:py-3 px-10 py-4 font-bold rounded-md text-magenta text-[20px] md:text-[25px] hover:bg-softy hover:text-pinky transition duration-500 ease-out">Get
+                                In Touch</button>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="font-medium text-[19px] mt-[43px] text-center text-dusty lg:text-left">"I feel so much productive
+                            ❤️ as I used this watch.”</p>
+                        <div class="mt-[33px] flex items-center justify-center gap-5 lg:items-start lg:justify-start">
+                            <img src="/public/aset/profile.png" alt="" class="w-[82px] h-[82px] object-cover object-center rounded-full">
+                            <div class=" flex flex-col gap-1 items-start justify-start">
+                                <h2 class="font-bold text-magenta text-[17px]">Chwakillah</h2>
+                                <p class="font-medium text-choco">CEO at Space-inWatch</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section>
+        <div>
+            
+        </div>
+    </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
+
 </html>
